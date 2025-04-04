@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label 'AGENT-1'
+    }
     stages {
         stage('Build') {
             steps {
@@ -29,5 +31,5 @@ pipeline {
         failure{
             echo "This section run when pipeline failure"
         }
-    }
+    } 
 }
